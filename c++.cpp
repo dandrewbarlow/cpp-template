@@ -22,16 +22,27 @@
 // curses: advanced console functionality
 #include <curses.h>
 
+using namespace std;
+
 // CLASSES////////////////////////////////////////////////
 
 // HELPER FUNCTIONS///////////////////////////////////////
-void ui(int input) {
+int ui() {
+  int input;
+  cin >> input;
   switch (input) {
-    case /* value */:
+    //
+    case 1:
       // insert code
       break;
+    case 0:
+      return 0;
   }
-  return;
+  return 1;
+}
+
+void menu() {
+  // print any recurring commands here
 }
 
 // INITIALIZE/////////////////////////////////////////////
@@ -39,11 +50,15 @@ void ui(int input) {
 void init() {
   //insert any initilization here
   // srand(time(NULL));
+  menu();
 }
 
 // MAIN //////////////////////////////////////////////////
-int int main(int argc, char const *argv[]) {
-
+int main(int argc, char const *argv[]) {
+  init();
+  while (ui()) {
+    menu();
+  }
 
   return 0;
 }
