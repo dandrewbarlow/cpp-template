@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Og
+CXXFLAGS = -Wall -Og `pkg-config --cflag --libs gtkmm3.0`
 
 main: main.o
 	$(CXX) $(CXXFLAGS) main.o -o main

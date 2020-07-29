@@ -21,6 +21,10 @@
 #include <time.h>
 // curses: advanced console functionality
 #include <curses.h>
+// gtkmm: the c++ gtk binding library for guis
+// Makefile/compiler options must include the following:
+// `pkg-config --cflags --libs gtkmm3.0`
+#include <gtkmm.h>
 
 using namespace std;
 
