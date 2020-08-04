@@ -1,12 +1,15 @@
-CXX = g++
+CXX = g++ -std=c++17
 CXXFLAGS = -Wall -Og
+SOURCES = $(wildcard *.cpp)
+OBJECTS = $(SOURCES:.cpp=.o)
+EXEC=main
 
-main: main.o
-	$(CXX) $(CXXFLAGS) main.o -o main
+$(EXEC): $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(EXEC)
 
-main.o: main.cpp
-	$(CXX) $(CXXFLAGS) -c main.cpp
+%.o: %.cpp
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
 
 clean:
-	rm *.o
-	rm main
+	rm-f $(OBJECTS) $(DEPENDS) $(EXEC)

@@ -5,6 +5,8 @@
 
 // LIBRARIES//////////////////////////////////////////////
 
+// these are kept in as common options, but best practices dictate some pruning
+
 // Input / Output Streams
 #include <iostream>
 // File Streams
