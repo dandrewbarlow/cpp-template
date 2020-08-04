@@ -12,4 +12,4 @@ $(EXEC): $(OBJECTS)
 
 
 clean:
-	rm-f $(OBJECTS) $(DEPENDS) $(EXEC)
+	rm -f $(OBJECTS) $(DEPENDS) $(EXEC)
