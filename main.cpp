@@ -24,6 +24,9 @@
 // `pkg-config --cflags --libs gtkmm3.0`
 #include <gtkmm.h>
 
+// support for windows cross-compilation
+#include <windows.h>
+
 using namespace std;
 
 // CLASSES////////////////////////////////////////////////

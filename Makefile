@@ -1,4 +1,5 @@
 CXX = g++ -std=c++17
+WINDOWSCXX = i586-mingw32msvc-g++
 CXXFLAGS = -Wall -Og
 GTKFLAGS = `pkg-config gtkmm-3.0 --cflags --libs`
 SOURCES = $(wildcard *.cpp)
